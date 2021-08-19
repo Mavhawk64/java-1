@@ -1,5 +1,0 @@
-Fortune 500 Report for 1980
-Revenue
-Min: 409.700 Max: 66311.200 Avg: 2819.671 StD: 5876.843
-Profit
-Min: -293.000 Max: 3011.300 Avg: 160.641 StD: 344.554
