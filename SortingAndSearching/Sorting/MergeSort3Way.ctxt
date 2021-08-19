@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=gArray
+comment0.target=void\ mergeSort3Way(java.lang.Integer[])
+comment1.params=gArray\ low\ high\ destArray
+comment1.target=void\ mergeSort3WayRec(java.lang.Integer[],\ int,\ int,\ java.lang.Integer[])
+comment1.text=\ Performing\ the\ merge\ sort\ algorithm\ on\ the\r\n\ \ \ \ given\ array\ of\ values\ in\ the\ rangeof\ indices\r\n\ \ \ \ [low,\ high).\ \ low\ is\ minimum\ index,\ high\ is\r\nmaximum\ index\ (exclusive)
+comment2.params=gArray\ low\ mid1\ mid2\ high\ destArray
+comment2.target=void\ merge(java.lang.Integer[],\ int,\ int,\ int,\ int,\ java.lang.Integer[])
+comment2.text=\ Merge\ the\ sorted\ ranges\ [low,\ mid1),\ [mid1,\r\n\ \ \ \ mid2)\ and\ [mid2,\ high)\ mid1\ is\ first\ midpoint\r\n\ \ \ \ index\ in\ overall\ range\ to\ merge\ mid2\ is\ second\r\nmidpoint\ index\ in\ overall\ range\ to\ merge
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ Done()
+comment1.params=
+comment1.target=void\ SymptomsOptions()
+comment2.params=
+comment2.target=BioWeapon()
+comment3.params=rand
+comment3.target=int\ randomness(int)
+comment4.params=
+comment4.target=void\ printer()
+comment5.params=
+comment5.target=void\ TransmissionOptions()
+comment6.params=
+comment6.target=void\ AbilitiesOptions()
+comment7.params=
+comment7.target=void\ Options()
+comment8.params=o
+comment8.target=void\ Options(java.lang.String)
+comment8.text=\r\n\ Overwritten\r\n
+numComments=9

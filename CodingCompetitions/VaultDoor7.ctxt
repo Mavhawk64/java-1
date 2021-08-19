@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VaultDoor7
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=hex
+comment2.target=int[]\ passwordToIntArray(java.lang.String)
+comment3.params=password
+comment3.target=boolean\ checkPassword(java.lang.String)
+numComments=4

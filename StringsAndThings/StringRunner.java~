@@ -1,0 +1,13 @@
+
+/**
+ **TEST ZONE**
+ */
+public class StringRunner
+{
+    public static void main (String [] args)
+    {
+        System.out.println("Welcome to the BETA version of the new string methods!!!");
+        String x = FunString.GuessThatString();
+        System.out.println(x);
+    }
+}

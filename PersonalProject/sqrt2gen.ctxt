@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=sqrt2gen
+comment0.text=\r\n\ This\ is\ a\ program\ that\ recursively\ generates\ digits\ for\ the\ square\r\n\ root\ of\ 2.\r\n\ \r\n\ 1\r\n\ 1+1\=2\r\n\ 1+1/(2+1)\=1.3333\r\n\ 1+1/(2+1/(2+1))\=10/7\=1.428571428...\r\n\ 1+1/(2+1/(2+1/(2+1)))\=24/17\=1.4117647...\r\n\ ...\r\n\ ...\=1.41421356237309...\r\n\r\n\ @author\ Maverick\ Berkland\r\n\ @version\ 1/20/2021\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ automateSQRT()
+comment3.params=x\ i
+comment3.target=double\ sqrt2(double,\ long)
+comment4.params=x\ i
+comment4.target=java.math.BigDecimal\ sqrt2B(java.math.BigDecimal,\ long)
+comment5.params=x
+comment5.target=java.math.BigDecimal\ absVal(java.math.BigDecimal)
+numComments=6

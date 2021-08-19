@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=RSA
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ RSA\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=b
+comment2.target=java.math.BigDecimal\ cuberoot(java.math.BigDecimal)
+comment3.params=savedValue\ value
+comment3.target=java.math.BigDecimal\ pow(java.math.BigDecimal,\ java.math.BigDecimal)
+comment4.params=x\ scale
+comment4.target=java.math.BigDecimal\ exp(java.math.BigDecimal,\ int)
+comment4.text=\r\n\ Compute\ e^x\ to\ a\ given\ scale.\r\n\ Break\ x\ into\ its\ whole\ and\ fraction\ parts\ and\r\n\ compute\ (e^(1\ +\ fraction/whole))^whole\ using\ Taylor's\ formula.\r\n\ @param\ x\ the\ value\ of\ x\r\n\ @param\ scale\ the\ desired\ scale\ of\ the\ result\r\n\ @return\ the\ result\ value\r\n
+comment5.params=x\ scale
+comment5.target=java.math.BigDecimal\ ln(java.math.BigDecimal,\ int)
+comment5.text=\r\n\ Compute\ the\ natural\ logarithm\ of\ x\ to\ a\ given\ scale,\ x\ >\ 0.\r\n
+comment6.params=x\ scale
+comment6.target=java.math.BigDecimal\ expTaylor(java.math.BigDecimal,\ int)
+comment6.text=\r\n\ Compute\ e^x\ to\ a\ given\ scale\ by\ the\ Taylor\ series.\r\n\ @param\ x\ the\ value\ of\ x\r\n\ @param\ scale\ the\ desired\ scale\ of\ the\ result\r\n\ @return\ the\ result\ value\r\n
+comment7.params=x\ exponent\ scale
+comment7.target=java.math.BigDecimal\ intPower(java.math.BigDecimal,\ long,\ int)
+comment7.text=\r\n\ Compute\ x^exponent\ to\ a\ given\ scale.\ \ Uses\ the\ same\r\n\ algorithm\ as\ class\ numbercruncher.mathutils.IntPower.\r\n\ @param\ x\ the\ value\ x\r\n\ @param\ exponent\ the\ exponent\ value\r\n\ @param\ scale\ the\ desired\ scale\ of\ the\ result\r\n\ @return\ the\ result\ value\r\n
+comment8.params=x\ scale
+comment8.target=java.math.BigDecimal\ lnNewton(java.math.BigDecimal,\ int)
+comment8.text=\r\n\ Compute\ the\ natural\ logarithm\ of\ x\ to\ a\ given\ scale,\ x\ >\ 0.\r\n\ Use\ Newton's\ algorithm.\r\n
+comment9.params=x\ index\ scale
+comment9.target=java.math.BigDecimal\ intRoot(java.math.BigDecimal,\ long,\ int)
+comment9.text=\r\n\ Compute\ the\ integral\ root\ of\ x\ to\ a\ given\ scale,\ x\ >\=\ 0.\r\n\ Use\ Newton's\ algorithm.\r\n\ @param\ x\ the\ value\ of\ x\r\n\ @param\ index\ the\ integral\ root\ value\r\n\ @param\ scale\ the\ desired\ scale\ of\ the\ result\r\n\ @return\ the\ result\ value\r\n
+numComments=10

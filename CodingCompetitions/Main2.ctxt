@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Main2
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=long\ conBase()
+comment3.params=x
+comment3.target=int\ numberInput(java.lang.String)
+comment4.params=x
+comment4.target=int\ numberInput(char)
+numComments=5

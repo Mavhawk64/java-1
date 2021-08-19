@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ destroy()
+comment1.params=
+comment1.target=void\ skarmy()
+comment2.params=
+comment2.target=boolean\ isDead()
+comment3.params=rage
+comment3.target=void\ getRage(boolean)
+comment4.params=
+comment4.target=void\ kill()
+comment5.params=
+comment5.target=boolean\ isMuerte()
+numComments=6

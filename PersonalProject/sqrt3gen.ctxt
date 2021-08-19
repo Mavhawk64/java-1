@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=sqrt3gen
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ sqrt3gen\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=x\ i
+comment2.target=double\ sqrt3(double,\ long)
+numComments=3

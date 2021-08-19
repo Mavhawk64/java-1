@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=RowSumOddNumbers
+comment1.params=
+comment1.target=void\ main()
+comment1.text=\r\n\ Main\ Method\ --\ Solved\ By\ Maverick\ Berkland\r\n
+comment2.params=n
+comment2.target=int\ rowSumOddNumbers(int)
+numComments=3

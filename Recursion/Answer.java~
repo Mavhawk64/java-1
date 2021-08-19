@@ -1,0 +1,33 @@
+import java.util.Random;
+/**
+ * Write a description of class Answrer here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Answer
+{
+    int x;
+    public static void main (String [] args)
+    {
+        Random rand = new Random();
+        int n = rand.nextInt(50)+1;
+        for(int i = 1; i > 10; i++)
+        {
+            System.out.println(ansWer(i));
+        }
+    }
+    
+    private static String ansWer(int x)
+    {
+        if( x == 50 )
+        {
+            return "Reached 50";
+        }
+        else if ( x == 0 )
+        {
+            return "Reached 0";
+        }
+        return ansWer(x);
+    }
+}

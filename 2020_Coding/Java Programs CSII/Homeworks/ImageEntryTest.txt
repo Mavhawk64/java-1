@@ -1,0 +1,153 @@
+// COURSE: CSCI1620
+// TERM: FALL 2020
+//
+// NAME: Tristan Shockey
+// RESOURCES: No outside materials were utilized
+
+package scraper.tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import scraper.base.ImageEntry;
+import scraper.base.WebScraper;
+
+/**
+ * Conducts a series of tests on ImageEntry.
+ * @author tristanshockey
+ *
+ */
+public class ImageEntryTest
+{
+	final String PAGE_0 = "http://kreestman.unomaha.community/hw3testpage/page0.html";
+	
+	final String PAGE_1 = "http://kreestman.unomaha.community/hw3testpage/page1.html";
+	final String IMAGE_DOG = "http://kreestman.unomaha.community/hw3testpage/imgs/brodieBolt.jpg";
+	final String IMAGE_LOGO = "http://kreestman.unomaha.community/hw3testpage/imgs/logo_uno.png";
+	
+	final String PAGE_2 = "http://kreestman.unomaha.community/hw3testpage/page2.html";
+	final String TREE_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Palm_Tree_Emoji_42x42.png";
+	final String PIZZA_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Slice_Of_Pizza_Emoji_42x42.png";
+	final String HAT_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Top_Magic_Hat_Emoji_42x42.png";
+	final String TURTLE_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Turtle_Emoji_42x42.png";
+	final String MOON_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Waning_crescent_moon_emoji_icon_png_42x42.png";
+	
+	
+	final String PAGE_3 = "http://kreestman.unomaha.community/hw3testpage/page3.html";
+	final String DOG_1 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy1.jpg";
+	final String DOG_2 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy2.jpg";
+	final String DOG_3 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy3.jpg";
+	final String DOG_4 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy4.jpg";
+	final String DOG_5 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy5.jpg";
+	final String DOG_6 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy6.jpg";
+	
+	@Test
+	public void testConstructorValid()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		
+		assertEquals(test.getPageLocation(), PAGE_3);
+		assertEquals(test.getImgLocation(), DOG_1);
+	}
+	
+	@Test
+	public void testEqualsValidEqual()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry compare = new ImageEntry(PAGE_3, DOG_1);
+		
+		boolean result = test.equals(compare);
+		
+		assertEquals(true, result);
+	}
+	
+	@Test
+	public void testEqualsValidDifferent()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry compare = new ImageEntry(PAGE_3, DOG_2);
+		
+		boolean result = test.equals(compare);
+		
+		assertEquals(false, result);
+	}
+
+	@Test
+	public void testEqualsInValidNull()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry compare = new ImageEntry(PAGE_3, null);
+		
+		boolean result = test.equals(compare);
+		
+		assertEquals(false, result);
+	}
+	
+	@Test
+	public void testEqualsInValidDifferentObject()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		WebScraper compare = new WebScraper(PAGE_3);
+		
+		boolean result = test.equals(compare);
+		
+		assertEquals(false, result);
+	}
+	
+	@Test
+	public void testToStringValid()
+	{
+		ImageEntry test = new ImageEntry(PAGE_3, DOG_1);
+		
+		String result = test.toString();
+		
+		assertEquals(DOG_1, result);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

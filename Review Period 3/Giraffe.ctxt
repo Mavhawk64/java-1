@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ makeNoise()
+comment1.params=
+comment1.target=boolean\ isAlive()
+comment2.params=x
+comment2.target=void\ flipIt(boolean)
+numComments=3

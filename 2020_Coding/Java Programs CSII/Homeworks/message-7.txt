@@ -1,0 +1,84 @@
+// COURSE: CSCI1620
+// TERM: Fall 2020
+//
+// NAME: Maverick Berkland and Abdoul Latoundji
+// RESOURCES: I used no external resources in creating this class.
+package tests;
+
+import static org.junit.Assert.*;
+import travelgui.*;
+import org.junit.Test;
+import triptypes.*;
+import java.util.Calendar;
+/**
+ * This is the testing JUnit class.
+ * @author mavberk and abdoullatoundji
+ *
+ */
+public class TravelAgencyTest
+{
+	@Test
+	public void testVacationPackageCollection()
+	{
+		VacationPackageCollection x = new VacationPackageCollection();
+		assertEquals(x.getNumTrips(), 0);
+		assertNull(x.getAllVacations());
+		String[] z = {"China", "Mexico"};
+		RoadTrip y = new RoadTrip("TESTER ROAD", 1000, z, 10000.01, 100, 2, 5);
+		x.addVacation(y);
+		Cruise a = new Cruise("TESTER CRUISE", 10, "S.S. Minnow", "Fort Lauderdale", Calendar.getInstance(), Calendar.getInstance(), 3500);
+		assertEquals(x.getNumTrips(), 1);
+		System.out.println(x.getAllVacations()[0] + "\n" + y);
+		assertEquals(x.getAllVacations()[0].toString(), y.toString());
+		x.addVacation(a);
+		//Skipped filter and getFlight
+		assertEquals(x.getItemAt(0).toString(), y.toString());
+		assertNull(x.getItemAt(100));
+		assertNull(x.getItemAt(-1));
+		x.sortCollection(true);
+		assertEquals(x.getItemAt(0).toString(), a.toString());
+		assertEquals(x.getItemAt(1).toString(), y.toString());
+		
+		
+	}
+    
+	@Test
+	public void testAllInclusive()
+	{
+		//String[] x = 
+		AllInclusiveResort a =  new AllInclusiveResort("Promotion", 15, " Bermuda Triangle", 2, 589, new String[5]);
+		
+	
+	
+	}
+	
+	@Test
+	public void testCruise()
+	{
+	    
+	}
+	
+	@Test
+	public void testFlight()
+	{
+	    
+	}
+	
+	@Test
+	public void testFlightOptionalPackage()
+	{
+	    
+	}
+	
+	@Test
+	public void testRoadTrip()
+	{
+	    
+	}
+	
+	@Test
+	public void testVacationPackage()
+	{
+	    
+	}
+}

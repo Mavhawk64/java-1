@@ -1,0 +1,554 @@
+// COURSE: CSCI1620
+// TERM: FALL 2020
+//
+// NAME: Tristan Shockey
+// RESOURCES: No outside materials were utilized
+
+package scraper.tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import scraper.base.WebScraper;
+import scraper.base.ImageEntry;
+
+import scraper.utils.PageHistory;
+import scraper.utils.ResultSet;
+import scraper.utils.Document;
+import scraper.utils.Element;
+import scraper.utils.Elements;
+
+public class WebScraperTest
+{
+	final String PAGE_0 = "http://kreestman.unomaha.community/hw3testpage/page0.html";
+	
+	final String PAGE_1 = "http://kreestman.unomaha.community/hw3testpage/page1.html";
+	final String IMAGE_DOG = "http://kreestman.unomaha.community/hw3testpage/imgs/brodieBolt.jpg";
+	final String IMAGE_LOGO = "http://kreestman.unomaha.community/hw3testpage/imgs/logo_uno.png";
+	
+	final String PAGE_2 = "http://kreestman.unomaha.community/hw3testpage/page2.html";
+	final String TREE_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Palm_Tree_Emoji_42x42.png";
+	final String PIZZA_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Slice_Of_Pizza_Emoji_42x42.png";
+	final String FACE_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Tears_of_Joy_Emoji_Icon_42x42.png";
+	final String HAT_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Top_Magic_Hat_Emoji_42x42.png";
+	final String TURTLE_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Turtle_Emoji_42x42.png";
+	final String MOON_IMG = "http://kreestman.unomaha.community/hw3testpage/imgs/Waning_crescent_moon_emoji_icon_png_42x42.png";
+	
+	
+	final String PAGE_3 = "http://kreestman.unomaha.community/hw3testpage/page3.html";
+	final String DOG_1 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy1.jpg";
+	final String DOG_2 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy2.jpg";
+	final String DOG_3 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy3.jpg";
+	final String DOG_4 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy4.jpg";
+	final String DOG_5 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy5.jpg";
+	final String DOG_6 = "http://kreestman.unomaha.community/hw3testpage/imgs/puppy6.jpg";
+	
+	final String PAGE_SECRET = "http://kreestman.unomaha.community/hw3testpage/secretpage.html";
+	final String HOMECOMING = "http://kreestman.unomaha.community/hw3testpage/imgs/Homecoming-Outtake1.jpg";
+	
+	final String BROKEN = "http://kreestman.unomaha.community/hw3testpage/brokenlinkhereyay.html";
+	
+	
+	@Test
+	public void testConstructorBasicValid()
+	{
+		WebScraper test = new WebScraper(PAGE_3);
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(0, test.getDepth());
+	}
+	
+	@Test
+	public void testConstructorDepthValid()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetURLValid()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		test.setURL(PAGE_2);
+		
+		assertEquals(PAGE_2, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetURLInValidNull()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		test.setURL(null);
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetURLInValidEmpty()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		test.setURL("");
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetURLInValidLink()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		test.setURL(BROKEN);
+		
+		//assertEquals(PAGE_3, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetDepthValid()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 0);
+		
+		test.setDepth(3);
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(3, test.getDepth());
+	}
+	
+	@Test
+	public void testSetDepthInValidNegative()
+	{
+		WebScraper test = new WebScraper(PAGE_3, 3);
+		
+		test.setDepth(-5);
+		
+		assertEquals(PAGE_3, test.getURL());
+		assertEquals(0, test.getDepth());
+	}	
+
+	@Test
+	public void testGetImagesNonDuplicatedImages()
+	{
+		WebScraper test = new WebScraper(PAGE_3);
+		
+		ResultSet result = test.getImages();
+		ResultSet answer = new ResultSet();
+		
+		ImageEntry one = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry two = new ImageEntry(PAGE_3, DOG_2);
+		ImageEntry three = new ImageEntry(PAGE_3, DOG_3);
+		ImageEntry four = new ImageEntry(PAGE_3, DOG_4);
+		ImageEntry five = new ImageEntry(PAGE_3, DOG_5);
+		ImageEntry six = new ImageEntry(PAGE_3, DOG_6);
+		
+		answer.addResult(one);
+		answer.addResult(five);
+		answer.addResult(two);
+		answer.addResult(three);
+		answer.addResult(four);
+		answer.addResult(six);
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < 6; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(6, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_3);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 1; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+	}
+	
+	@Test
+	public void testGetImagesDuplicatedImages()
+	{
+		WebScraper test = new WebScraper(PAGE_2);
+		
+		ResultSet result = test.getImages();
+		ResultSet answer = new ResultSet();
+		
+		ImageEntry one = new ImageEntry(PAGE_2, TREE_IMG);
+		ImageEntry two = new ImageEntry(PAGE_2, PIZZA_IMG);
+		ImageEntry three = new ImageEntry(PAGE_2, FACE_IMG);
+		ImageEntry four = new ImageEntry(PAGE_2, HAT_IMG);
+		ImageEntry five = new ImageEntry(PAGE_2, TURTLE_IMG);
+		ImageEntry six = new ImageEntry(PAGE_2, MOON_IMG);
+		ImageEntry seven = new ImageEntry(PAGE_2, IMAGE_LOGO);
+		
+		answer.addResult(one);
+		answer.addResult(two);
+		answer.addResult(three);
+		answer.addResult(four);
+		answer.addResult(five);
+		answer.addResult(six);
+		answer.addResult(seven);
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < 7; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(7, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_2);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 1; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+	}
+	
+	@Test
+	public void testGetImagesNone()
+	{
+		WebScraper test = new WebScraper(PAGE_0);
+		
+		ResultSet result = test.getImages();
+		
+		assertEquals(0, result.getNumEntries());
+	}
+	
+	@Test
+	public void testCrawlPageValid()
+	{
+		WebScraper test = new WebScraper(PAGE_1, 10);
+		ResultSet result = test.crawlPage();
+		ResultSet answer = new ResultSet();
+		
+		
+		ImageEntry one = new ImageEntry(PAGE_1, IMAGE_DOG);
+		ImageEntry two = new ImageEntry(PAGE_1, IMAGE_LOGO);
+		ImageEntry three = new ImageEntry(PAGE_2, TREE_IMG);
+		ImageEntry four = new ImageEntry(PAGE_2, PIZZA_IMG);
+		ImageEntry five = new ImageEntry(PAGE_2, FACE_IMG);
+		ImageEntry six = new ImageEntry(PAGE_2, HAT_IMG);
+		ImageEntry seven = new ImageEntry(PAGE_2, TURTLE_IMG);
+		ImageEntry eight = new ImageEntry(PAGE_2, MOON_IMG);
+		ImageEntry nine = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry ten = new ImageEntry(PAGE_3, DOG_5);
+		ImageEntry eleven = new ImageEntry(PAGE_3, DOG_2);
+		ImageEntry twelve = new ImageEntry(PAGE_3, DOG_3);
+		ImageEntry thirteen = new ImageEntry(PAGE_3, DOG_4);
+		ImageEntry fourteen = new ImageEntry(PAGE_3, DOG_6);
+		ImageEntry fifteen = new ImageEntry(PAGE_SECRET, HOMECOMING);
+		
+		answer.addResult(one);
+		answer.addResult(two);
+		answer.addResult(three);
+		answer.addResult(four);
+		answer.addResult(five);
+		answer.addResult(six);
+		answer.addResult(seven);
+		answer.addResult(eight);
+		answer.addResult(nine);
+		answer.addResult(ten);
+		answer.addResult(eleven);
+		answer.addResult(twelve);
+		answer.addResult(thirteen);
+		answer.addResult(fourteen);
+		answer.addResult(fifteen);
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < results.length; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(15, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_1);
+		ans.markVisited(PAGE_2);
+		ans.markVisited(PAGE_3);
+		ans.markVisited(PAGE_SECRET);
+		ans.markVisited(PAGE_0);
+		ans.markVisited(BROKEN);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 6; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+		assertEquals(6, history.length);
+	}
+	
+	@Test
+	public void testCrawlPageValidDepthOne()
+	{
+		WebScraper test = new WebScraper(PAGE_1, 1);
+		ResultSet result = test.crawlPage();
+		ResultSet answer = new ResultSet();
+		
+		
+		ImageEntry one = new ImageEntry(PAGE_1, IMAGE_DOG);
+		ImageEntry two = new ImageEntry(PAGE_1, IMAGE_LOGO);
+		ImageEntry three = new ImageEntry(PAGE_2, TREE_IMG);
+		ImageEntry four = new ImageEntry(PAGE_2, PIZZA_IMG);
+		ImageEntry five = new ImageEntry(PAGE_2, FACE_IMG);
+		ImageEntry six = new ImageEntry(PAGE_2, HAT_IMG);
+		ImageEntry seven = new ImageEntry(PAGE_2, TURTLE_IMG);
+		ImageEntry eight = new ImageEntry(PAGE_2, MOON_IMG);
+		ImageEntry nine = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry ten = new ImageEntry(PAGE_3, DOG_5);
+		ImageEntry eleven = new ImageEntry(PAGE_3, DOG_2);
+		ImageEntry twelve = new ImageEntry(PAGE_3, DOG_3);
+		ImageEntry thirteen = new ImageEntry(PAGE_3, DOG_4);
+		ImageEntry fourteen = new ImageEntry(PAGE_3, DOG_6);
+		ImageEntry fifteen = new ImageEntry(PAGE_SECRET, HOMECOMING);
+		
+		answer.addResult(one);
+		answer.addResult(two);
+		answer.addResult(three);
+		answer.addResult(four);
+		answer.addResult(five);
+		answer.addResult(six);
+		answer.addResult(seven);
+		answer.addResult(eight);
+		answer.addResult(nine);
+		answer.addResult(ten);
+		answer.addResult(eleven);
+		answer.addResult(twelve);
+		answer.addResult(thirteen);
+		answer.addResult(fourteen);
+		answer.addResult(fifteen);
+		
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < 15; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(15, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_1);
+		ans.markVisited(PAGE_2);
+		ans.markVisited(PAGE_3);
+		ans.markVisited(PAGE_SECRET);
+		ans.markVisited(PAGE_0);
+		ans.markVisited(BROKEN);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 6; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+		assertEquals(6, history.length);
+	}
+	
+	@Test
+	public void testCrawlPageValidDepthZero()
+	{
+		WebScraper test = new WebScraper(PAGE_1, 0);
+		ResultSet result = test.crawlPage();
+		ResultSet answer = new ResultSet();
+		
+		
+		ImageEntry one = new ImageEntry(PAGE_1, IMAGE_DOG);
+		ImageEntry two = new ImageEntry(PAGE_1, IMAGE_LOGO);
+		
+		answer.addResult(one);
+		answer.addResult(two);
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < 2; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(2, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_1);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 1; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+		assertEquals(1, history.length);
+	}
+	
+	@Test
+	public void testCrawlPageValidDepthOneDuplicate()
+	{
+		WebScraper test = new WebScraper(PAGE_2, 1);
+		ResultSet result = test.crawlPage();
+		ResultSet answer = new ResultSet();
+		
+		ImageEntry one = new ImageEntry(PAGE_2, TREE_IMG);
+		ImageEntry two = new ImageEntry(PAGE_2, PIZZA_IMG);
+		ImageEntry three = new ImageEntry(PAGE_2, FACE_IMG);
+		ImageEntry four = new ImageEntry(PAGE_2, HAT_IMG);
+		ImageEntry five = new ImageEntry(PAGE_2, TURTLE_IMG);
+		ImageEntry six = new ImageEntry(PAGE_2, MOON_IMG);
+		ImageEntry seven = new ImageEntry(PAGE_1, IMAGE_LOGO);
+		ImageEntry eight = new ImageEntry(PAGE_1, IMAGE_DOG);
+		ImageEntry nine = new ImageEntry(PAGE_3, DOG_1);
+		ImageEntry ten = new ImageEntry(PAGE_3, DOG_5);
+		ImageEntry eleven = new ImageEntry(PAGE_3, DOG_2);
+		ImageEntry twelve = new ImageEntry(PAGE_3, DOG_3);
+		ImageEntry thirteen = new ImageEntry(PAGE_3, DOG_4);
+		ImageEntry fourteen = new ImageEntry(PAGE_3, DOG_6);
+		ImageEntry fifteen = new ImageEntry(PAGE_SECRET, HOMECOMING);
+		
+		answer.addResult(one);
+		answer.addResult(two);
+		answer.addResult(three);
+		answer.addResult(four);
+		answer.addResult(five);
+		answer.addResult(six);
+		answer.addResult(seven);
+		answer.addResult(eight);
+		answer.addResult(nine);
+		answer.addResult(ten);
+		answer.addResult(eleven);
+		answer.addResult(twelve);
+		answer.addResult(thirteen);
+		answer.addResult(fourteen);
+		answer.addResult(fifteen);
+		
+		ImageEntry[] results = result.getAllResults();
+		ImageEntry[] answers = answer.getAllResults();
+		
+		for (int i = 0; i < 15; i++)
+		{
+			assertEquals(results[i], answers[i]);
+		}
+		assertEquals(15, result.getNumEntries());
+		
+		PageHistory ans = new PageHistory();
+		ans.markVisited(PAGE_2);
+		ans.markVisited(PAGE_1);
+		ans.markVisited(PAGE_3);
+		ans.markVisited(PAGE_0);
+		ans.markVisited(BROKEN);
+		ans.markVisited(PAGE_SECRET);
+		String[] history = test.getPageHistory().getHistory();
+		String[] correct = ans.getHistory();
+		
+		for (int a = 0; a < 6; a++)
+		{
+			assertEquals(history[a], correct[a]);
+		}
+		assertEquals(6, history.length);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

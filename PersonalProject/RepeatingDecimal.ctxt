@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=RepeatingDecimal
+comment0.text=\r\n\ This\ program\ asks\ for\ three\ repeating\ iterations\ of\ a\ number.\ It\ gets\ the\ number\ by\r\n\ dividing\ the\ inputted\ string\ in\ thirds\ after\ establishing\ the\ front\ number\ (the\ number\r\n\ before\ the\ decimal)\ and\ the\ decimal.\ An\ example\ is\ inputting\ the\ string\:\ "1.123123123",\r\n\ in\ which\ it\ will\ take\ off\ the\ first\ number,\ "1",\ and\ get\ the\ decimal,\ "123123123",\ and\r\n\ divide\ the\ decimal\ into\ three,\ using\ the\ length\ of\ the\ string\ divided\ by\ three,\ leaving\r\n\ us\ with\ "123".\ This\ will\ be\ converted\ into\ an\ int\ after\ getting\ the\ length\ of\ the\ string\r\n\ left\ over,\ 3.\ The\ numerator\ will\ be\ calculated\ by\ my\ own\ algorithm,\ and\ divided\ by\ a\r\n\ summation\ equation,\ such\ that\ the\ denominator\ will\ be\ 9,\ 99,\ 999,\ 9999,...\ etc.\ \r\n\r\n\ @Maverick\ Berkland\r\n\ @7\ July,\ 2019\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=input
+comment2.target=int\ getRep(java.lang.String)
+comment3.params=input
+comment3.target=int\ getFirst(java.lang.String)
+comment4.params=rep
+comment4.target=int\ getN(int)
+comment5.params=n
+comment5.target=int\ getDenom(int)
+comment6.params=rep\ front\ n
+comment6.target=int\ getNum(int,\ int,\ int)
+comment7.params=x
+comment7.target=java.lang.String\ print(java.lang.String)
+comment8.params=x
+comment8.target=java.lang.String\ println(java.lang.String)
+numComments=9

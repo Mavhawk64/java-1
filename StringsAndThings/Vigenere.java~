@@ -1,0 +1,83 @@
+
+import java.util.Scanner;
+/**
+ * Write a description of class VigenereCipher here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Vigenere
+{
+    public static void Vigenere (String [] args)
+    {
+        System.out.println("Would you like to encrypt or decrypt via Vigenere?");
+        Scanner scan = new Scanner(System.in);
+        String answer = scan.nextLine();
+        Vigenere v1 = new Vigenere();
+        String msg = "";
+        if(answer.contains("e"))
+        {
+            v1.Encrypt(msg);
+        }
+        else
+        {
+            v1.Decrypt(msg);
+        }
+    }
+
+    private static String Encrypt (String msg)
+    {
+        int i;
+        char x;
+        int key = 1;
+        int y = 0;
+        Caesar c1 = new Caesar();
+        System.out.println("Please enter your secret message.");
+        Scanner scan1 = new Scanner(System.in);
+        msg = scan1.nextLine();
+        System.out.println("Now, enter your key.(Word)");
+        String keyV = scan1.nextLine();
+        char [] keychar = keyV.toCharArray();
+        int keynum = keychar.length;
+        char [] vigenere = msg.toCharArray();
+        for(i = 0; i < vigenere.length; i++)
+        {
+            //Vigenere[i] = ASCII 97 - 122
+            y = i%keynum;
+            char z = keyV.charAt(y);
+            x = msg.charAt(i);
+            c1.Encrypt(msg, key, keyV, keynum, keychar);
+            
+        }
+        System.out.print((char)y);
+        return msg;
+    }
+
+    private static String Decrypt (String msg)
+    {
+         int i;
+        char x;
+        int key = 1;
+        int y = 0;
+        Caesar c1 = new Caesar();
+        System.out.println("Please enter your secret message.");
+        Scanner scan1 = new Scanner(System.in);
+        msg = scan1.nextLine();
+        System.out.println("Now, enter your key.(Word)");
+        String keyV = scan1.nextLine();
+        char [] keychar = keyV.toCharArray();
+        int keynum = keychar.length;
+        char [] vigenere = msg.toCharArray();
+        for(i = 0; i < vigenere.length; i++)
+        {
+            //Vigenere[i] = ASCII 97 - 122
+            y = i%keynum;
+            char z = keyV.charAt(y);
+            x = msg.charAt(i);
+            c1.Decrypt(msg, key, keyV, keynum, keychar);
+            
+        }
+        System.out.print((char)y);
+        return msg;
+    }
+}

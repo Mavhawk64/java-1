@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=sound
+comment0.target=void\ noise(java.lang.String)
+comment1.params=eye
+comment1.target=void\ eyeColor(java.lang.String)
+comment2.params=hair
+comment2.target=void\ hairColor(java.lang.String)
+numComments=3

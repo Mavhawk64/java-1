@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=radius
+comment0.target=int[][]\ newCircle(int)
+comment0.text=\ Creates\ new\ filled\ circle\r\n\ \ @param\ int\ radius\r\n\ \ <p>PRECONDITION\:\ radius\ in\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @return\ filled\ two-dimensional\ array\ for\ printing\r\n
+comment1.params=radius
+comment1.target=int[][]\ newHollowCircle(int)
+comment1.text=\ Creates\ a\ new\ Hollow\ Circle\r\n\ \ @param\ Integer\ radius\r\n\ \ <p>PRECONDITION\:\ radius\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @return\ Filled\ array\ Output\r\n
+comment2.params=x\ y
+comment2.target=int[][]\ newHollowRectangle(int,\ int)
+comment2.text=\ Creates\ a\ new\ Hollow\ Rectangle\r\n\ \ @param\ Integer\ x\ (width)\r\n\ \ <p>PRECONDITION\:\ x\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @param\ Integer\ y\ (height)\r\n\ \ <p>PRECONDITION\:\ y\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @return\ filled\ array\ Output\r\n
+comment3.params=x\ y
+comment3.target=int[][]\ newRectangle(int,\ int)
+comment3.text=\ Creates\ a\ new\ filled\ Rectangle\r\n\ \ @param\ Integer\ x\ (width)\r\n\ \ <p>PRECONDITION\:\ x\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @param\ Integer\ y\ (height)\r\n\ \ <p>PRECONDITION\:\ y\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @return\ Filled\ array\ Output\r\n
+comment4.params=size
+comment4.target=int[][]\ newSquare(int)
+comment4.text=\ Creates\ a\ new\ filled\ Square\r\n\ @param\ Integer\ size\r\n\ <p>PRECONDITION\:\ size\ is\ and\ integer\ greater\ than\ zero</p>\r\n\ @return\ two-dimensional\ array\ Output\r\n
+comment5.params=size\ direction
+comment5.target=int[][]\ newTriangle(int,\ Orgins)
+comment5.text=\ Creates\ a\ new\ filled\ right\ Triangle\r\n\ \ @param\ Integer\ size\r\n\ \ <p>PRECONDITION\:\ size\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ \ @param\ Orgins\ direction\r\n\ \ @return\ two\ dimensional\ array\ Output\r\n\ \ \r\n
+comment6.params=size
+comment6.target=int[][]\ customShapeHere(int)
+comment6.text=\ Blank\ method\ to\ provide\ a\ base\ for\ additional\ shapes\r\n\ <p>Use\ this\ method\ to\ create\ new\ custom\ shapes</p>\r\n\ @param\ Size\ to\ build\ shape\ to\r\n\ <p>PRECONDITION\:\ size\ is\ an\ integer\ greater\ than\ zero</p>\r\n\ @returns\ filled\ two-dimensional\ Integer\ array\r\n
+numComments=7

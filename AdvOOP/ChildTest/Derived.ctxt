@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Derived()
+comment1.params=length
+comment1.target=void\ printALine(int)
+comment1.text=\r\n\ Overriding\ the\ Base/Parent\ class\r\n
+comment2.params=x
+comment2.target=void\ count(int)
+comment3.params=y
+comment3.target=java.lang.String\ makeExciting(java.lang.String)
+numComments=4

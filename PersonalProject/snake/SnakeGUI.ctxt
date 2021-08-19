@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SnakeGUI
+comment1.params=theStage
+comment1.target=void\ start(javafx.stage.Stage)
+comment2.params=event
+comment2.target=void\ handle(javafx.scene.input.KeyEvent)
+comment3.params=arg
+comment3.target=void\ handle(long)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

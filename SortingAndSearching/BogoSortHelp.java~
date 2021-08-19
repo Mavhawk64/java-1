@@ -1,0 +1,85 @@
+import java.util.Random;
+/**
+ * Write a description of class BogoSortHelp here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class BogoSortHelp
+{
+    static long start = System.nanoTime();
+    static Random r1 = new Random();
+    static int [] array = {2,1};
+    static int [] temp = new int [array.length];
+    static int [] order = new int [array.length];
+    /**
+     * @BogoSort
+     */
+    public static void main (String [] args)
+    {
+        System.out.println("Original array: ");
+        for(int i = 0; i < array.length; i++)
+        {
+            System.out.print(array[i] + "  ");
+        }
+        
+        System.out.println(" ");
+        System.out.println(" ");
+        
+        while(!isSorted(array))
+        {
+            Randomize();
+        }
+
+        System.out.println("Array in order: ");
+        for(int i = 0; i < array.length; i++)
+        {
+            System.out.print(array[temp[i]] + "  ");
+        }
+        long end = System.nanoTime() - start;
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Finished in " + end + " nano seconds");
+    }
+
+    private static void Randomize ()
+    {
+        int count = 0;
+        boolean [] beenVisited = new boolean [array.length];
+        int x = r1.nextInt(array.length);
+        int index = 0;
+        order[x] = array[x]+1;
+        while(count < array.length)
+        {
+            x = r1.nextInt(array.length);
+            if(beenVisited[x] == false)
+            {
+                order[index] = x;
+                index++;
+                beenVisited[x] = true;
+                count++;
+            }
+        }
+    }
+
+    private static boolean isSorted (int [] array)
+    {
+        int sortCount = 0;
+        for(int i = 0; i < array.length - 1; i++)
+        {
+            if(array[order [i]] < array[order [ i + 1]])
+            {
+                sortCount++;
+            }
+        }
+
+        if(sortCount == array.length - 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Employee()
+comment1.params=
+comment1.target=void\ printInfo()
+comment2.params=isItTime
+comment2.target=void\ getRaise(boolean)
+numComments=3

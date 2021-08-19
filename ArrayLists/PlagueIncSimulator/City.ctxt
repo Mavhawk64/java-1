@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ createCity()
+comment1.params=infect\ lethal
+comment1.target=void\ getPop(int,\ int)
+comment2.params=
+comment2.target=boolean\ checkSick()
+comment3.params=
+comment3.target=boolean\ checkDead()
+comment4.params=
+comment4.target=void\ Illinois()
+comment5.params=
+comment5.target=void\ NewYork()
+comment6.params=
+comment6.target=void\ MA()
+comment7.params=
+comment7.target=void\ Florida()
+comment8.params=
+comment8.target=void\ Nebraska()
+comment9.params=
+comment9.target=void\ California()
+numComments=10

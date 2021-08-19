@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ scare()
+comment1.params=
+comment1.target=void\ bust()
+comment2.params=
+comment2.target=boolean\ isCaught()
+comment3.params=fruit
+comment3.target=void\ eatFruit(boolean)
+comment4.params=
+comment4.target=void\ printCaught()
+numComments=5

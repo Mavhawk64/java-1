@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=msg
+comment0.target=java.lang.String\ Encrypt(java.lang.String)
+comment1.params=msg\ z
+comment1.target=java.lang.String\ Caesar(java.lang.String,\ char)
+comment2.params=msg
+comment2.target=java.lang.String\ Vigenere(java.lang.String)
+numComments=3

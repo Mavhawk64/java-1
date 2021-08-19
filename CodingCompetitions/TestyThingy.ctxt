@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TestyThingy
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ TestyThingy\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=x
+comment2.target=int[]\ createArray(java.lang.String)
+comment3.params=x
+comment3.target=int\ addDumbbell(int[][])
+comment3.text=Assumes\ input\ is\ 3\ by\ 3
+comment4.params=x\ minX\ minY
+comment4.target=int\ dumbbellTotals(int[][],\ int,\ int)
+numComments=5

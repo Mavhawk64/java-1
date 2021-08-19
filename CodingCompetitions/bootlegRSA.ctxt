@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=bootlegRSA
+comment1.params=
+comment1.target=void\ main()
+comment2.params=num\ n
+comment2.target=java.math.BigDecimal\ NthRoot(java.math.BigInteger,\ java.math.BigInteger)
+comment3.params=base\ exponent
+comment3.target=java.math.BigDecimal\ pow(java.math.BigDecimal,\ java.math.BigInteger)
+numComments=4

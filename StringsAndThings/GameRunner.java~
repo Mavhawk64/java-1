@@ -1,0 +1,8 @@
+public class GameRunner
+{
+    public static void main (String [] args)
+    {
+        LETTERS x = new LETTERS();
+        x.LETTERs(point);
+    }
+}

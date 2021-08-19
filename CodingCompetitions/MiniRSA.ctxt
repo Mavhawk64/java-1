@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=MiniRSA
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MiniRSA\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=val
+comment2.target=java.math.BigInteger\ cbrt(java.math.BigInteger)
+comment2.text=\r\n\ Returns\ the\ cube\ root\ for\ big\ integers.\r\n\ \r\n\ @param\ val\r\n\ \ \ \ \ \ \ \ \ \ \ \ Value\ to\ compute\ the\ cube\ root\ of.\r\n\ @return\ (Rounded\ down)\ cube\ root\ of\ argument.\ That\ is,\ a\ value\ x\ such\r\n\ \ \ \ \ \ \ \ \ that\ x*x*x\ \=\ val.\r\n
+comment3.params=n\ x
+comment3.target=java.math.BigDecimal\ root(int,\ java.math.BigDecimal)
+comment3.text=\r\n\ The\ integer\ root.\r\n\ \r\n\ @param\ n\r\n\ \ \ \ \ \ \ \ \ \ \ \ the\ positive\ argument.\r\n\ @param\ x\r\n\ \ \ \ \ \ \ \ \ \ \ \ the\ non-negative\ argument.\r\n\ @return\ The\ n-th\ root\ of\ the\ BigDecimal\ rounded\ to\ the\ precision\ implied\r\n\ \ \ \ \ \ \ \ \ by\ x,\ x^(1/n).\r\n
+comment4.params=x\ d
+comment4.target=java.math.BigDecimal\ scalePrec(java.math.BigDecimal,\ int)
+comment4.text=\r\n\ Append\ decimal\ zeros\ to\ the\ value.\ This\ returns\ a\ value\ which\ appears\ to\r\n\ have\ a\ higher\ precision\ than\ the\ input.\r\n\ \r\n\ @param\ x\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ input\ value\r\n\ @param\ d\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ (positive)\ value\ of\ zeros\ to\ be\ added\ as\ least\ significant\r\n\ \ \ \ \ \ \ \ \ \ \ \ digits.\r\n\ @return\ The\ same\ value\ as\ the\ input\ but\ with\ increased\ (pseudo)\r\n\ \ \ \ \ \ \ \ \ precision.\r\n
+comment5.params=xerr
+comment5.target=int\ err2prec(double)
+comment5.text=\r\n\ Convert\ a\ relative\ error\ to\ a\ precision.\r\n\ \r\n\ @param\ xerr\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ relative\ error\ in\ the\ variable.\ The\ value\ returned\ depends\r\n\ \ \ \ \ \ \ \ \ \ \ \ only\ on\ the\ absolute\ value,\ not\ on\ the\ sign.\r\n\ @return\ The\ number\ of\ valid\ digits\ in\ x.\ The\ value\ is\ rounded\ down,\ and\r\n\ \ \ \ \ \ \ \ \ on\ the\ pessimistic\ side\ for\ that\ reason.\r\n
+numComments=6

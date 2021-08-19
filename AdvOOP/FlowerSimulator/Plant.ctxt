@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Plant()
+comment0.text=\r\n\ Constructor\r\n
+comment1.params=
+comment1.target=void\ menu()
+comment1.text=\r\n\ Override\ this\ in\ piranha\ and\ tulip\ classes\r\n
+comment2.params=
+comment2.target=void\ input()
+comment2.text=\r\n\ This\ is\ where\ the\ multipliers\ and\ bonuses\ get\ added\ to\ \r\n\ nat\ and\ fake\r\n
+comment3.params=
+comment3.target=void\ calculateGrowth()
+comment4.params=
+comment4.target=void\ calculateFake()
+comment5.params=
+comment5.target=void\ printPot()
+comment6.params=
+comment6.target=boolean\ checkWin()
+numComments=7

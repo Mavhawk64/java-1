@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=UFFF
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ UFFF\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=num\ divisor
+comment2.target=int\ getRemainder(int,\ int)
+numComments=3

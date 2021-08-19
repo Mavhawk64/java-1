@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=BlackJack
+comment0.text=\r\n\ A\ Program\ to\ play\ Black\ Jack\r\n\r\n\ @author\ Maverick\ Berkland\r\n\ @version\ 27\ August,\ 2019\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=
+comment2.target=void\ PlayerDeal()
+comment3.params=total
+comment3.target=void\ PlayerDraw(int)
+comment4.params=
+comment4.target=void\ DealerDeal()
+comment5.params=total
+comment5.target=void\ DealerDraw(int)
+comment6.params=
+comment6.target=void\ TotalChecker()
+comment7.params=
+comment7.target=java.lang.String\ Draw()
+comment8.params=
+comment8.target=java.lang.String\ Deal()
+numComments=9

@@ -1,0 +1,24 @@
+
+/**
+ * Recursive form of Fibonacci
+ */
+public class FibREKT
+{
+    public static void main (String [] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What n term do you want to go to?");
+        int n = scan.nextInt();
+        long start = System.nanoTime();
+        int c = fib(n);
+        System.out.println("--Recursive Form--");
+        long stop = System.nanoTime() - start;
+        System.out.println("FibREKT: " + c + " Time: " + stop);
+    }
+    
+    public static int fib (int x)
+    {
+        //RECURSION!!!
+        return fib(x);
+    }
+}

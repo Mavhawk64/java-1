@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=i
+comment0.target=RandomSort(int[])
+comment1.params=i
+comment1.target=void\ print(int[])
+comment2.params=i
+comment2.target=void\ shuffle(int[])
+comment3.params=i
+comment3.target=boolean\ isSorted(int[])
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ @param\ args\r\n
+numComments=5

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=a\ b
+comment1.target=long\ gcm(long,\ long)
+comment1.text=@return\ the\ greatest\ common\ denominator
+comment2.params=a\ b
+comment2.target=java.lang.String\ asFraction(long,\ long)
+comment2.text=@return\ longs\ as\ Fractions\ as\ a\ String
+numComments=3

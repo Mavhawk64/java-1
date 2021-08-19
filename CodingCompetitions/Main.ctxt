@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Main
+comment0.text=\r\n\ Inputs\:\r\n\ \r\n2\r\n3\r\n5\r\nJeffery\ Jefferson\r\nUther\ Pendragon\r\nTheodore\ Roosevelt\r\nAnny\ Skywalker\r\nJack\ Black\r\n1\r\n6\r\nGunther\ Anderson\r\nViviane\ Banderson\r\nMorgaine\ Canderson\r\nMordred\ Danderson\r\nDandilion\ Rex\r\nKing\ Johan\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=inputs\ n
+comment2.target=void\ getVals(java.util.ArrayList,\ int)
+comment3.params=l\ x
+comment3.target=int[]\ getSmaller(char[],\ int)
+comment4.params=inputs\ x
+comment4.target=char[]\ getChars(java.util.ArrayList,\ int)
+numComments=5

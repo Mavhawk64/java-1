@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=
+comment1.target=void\ EnglishMorse()
+comment2.params=
+comment2.target=void\ MorseEnglish()
+comment3.params=x
+comment3.target=void\ print(java.lang.String)
+comment4.params=x
+comment4.target=void\ printls(java.lang.String)
+numComments=5

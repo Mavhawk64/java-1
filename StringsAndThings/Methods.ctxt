@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ SayHello()
+comment0.text=\r\n\ THE\ VOID\ METHOD\r\n
+comment1.params=
+comment1.target=void\ SayHelloStatic()
+comment1.text=\r\n\ THE\ STATIC\ VOID\ METHOD\r\n
+comment2.params=
+comment2.target=int\ Numbers()
+comment2.text=\r\n\ The\ Return\ Method\r\n
+comment3.params=word
+comment3.target=void\ MakeExciting(java.lang.String)
+comment3.text=\r\n\ Parameter\ Method\r\n
+comment4.params=x\ y
+comment4.target=int\ Power(int,\ int)
+comment4.text=\r\n\ Both\ Returns\ and\ Accepts\ in\ Parameters\r\n
+comment5.params=x\ y\ z\ u\ scan
+comment5.target=java.lang.String\ test(int,\ int,\ java.lang.String,\ char[],\ java.util.Scanner)
+numComments=6

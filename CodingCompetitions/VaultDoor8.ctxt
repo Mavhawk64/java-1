@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=VaultDoor8
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=password
+comment2.target=char[]\ scramble(java.lang.String)
+comment3.params=c\ p1\ p2
+comment3.target=char\ switchBits(char,\ int,\ int)
+comment4.params=password
+comment4.target=boolean\ checkPassword(java.lang.String)
+numComments=5

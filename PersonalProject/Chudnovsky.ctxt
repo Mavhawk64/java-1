@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Chudnovsky
+comment0.text=\r\n\ This\ is\ an\ algorithm\ that\ approximates\ pi.\ It\ is\ adapted\ from\ the\ Chudnovsky\ Algorithm,\ program\ made\ by\ Maverick\ Berkland.\r\n\ \r\n\ pi\ \=\ 1/(12*sum[((k\=0,inf)(-1)^k(6k)\!(54514013k+13591409))/((3k)\!(k\!)^3(640320)^(3k+3/2)))\r\n\ \r\n\ or\ \r\n\ \r\n\ pi\ \=\ C(sum[(k\=0,inf)ML/X)^-1\r\n\ \r\n\ where\r\n\ \r\n\ C\ \=\ 426880sqrt(10005)\r\n\ M\ \=\ (6k)\!/((3k)\!(k\!)^3)\r\n\ L\ \=\ 545140134k\ +\ 13591409\r\n\ X\ \=\ (-262537412640768000)^k\r\n\r\n\ @author\ Maverick\ Berkland\r\n\ @version\ 15\ September,\ 2019\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=C\ input
+comment2.target=java.math.BigDecimal\ bigSum(java.math.BigDecimal,\ int)
+comment3.params=x
+comment3.target=java.math.BigDecimal\ Factorial(java.math.BigDecimal)
+numComments=4

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Base()
+comment1.params=
+comment1.target=void\ doStuff()
+comment2.params=length
+comment2.target=void\ printALine(int)
+comment2.text=\r\n\ Overridden\ by\ child\ class\ (Derived)\r\n
+comment3.params=x
+comment3.target=void\ count(int)
+numComments=4

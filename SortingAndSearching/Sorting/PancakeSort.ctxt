@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=arr\ i
+comment0.target=void\ flip(int[],\ int)
+comment0.text=Reverses\ arr[0..i]
+comment1.params=arr\ n
+comment1.target=int\ findMax(int[],\ int)
+comment1.text=Returns\ index\ of\ the\ maximum\ element\ in\ arr[0..n-1]
+comment2.params=arr\ n
+comment2.target=int\ pancakeSort(int[],\ int)
+comment3.params=arr\ arr_size
+comment3.target=void\ printArray(int[],\ int)
+comment3.text=Utility\ function\ to\ print\ array\ arr[]
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=Driver\ function\ to\ check\ for\ above\ functions
+numComments=5

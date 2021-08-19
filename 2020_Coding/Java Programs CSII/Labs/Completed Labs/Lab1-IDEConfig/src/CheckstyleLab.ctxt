@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CheckstyleLab
+comment0.text=\r\n\ Lab\ to\ practice\ Checkstyle\ formatting.\r\n\ \r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Main\ method\ which\ calculates\ the\ sum\ of\ the\ squares\ of\ the\ integers\ 1\ to\ 10\ inclusive.\r\n\ @param\ args\ Command\ line\ arguments\ (Unused)\r\n
+comment2.params=arr
+comment2.target=int\ sumArray(int[])
+numComments=3

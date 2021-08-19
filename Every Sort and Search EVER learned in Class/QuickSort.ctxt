@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=arr\ low\ high
+comment0.target=int\ partition(int[],\ int,\ int)
+comment0.text=\ This\ function\ takes\ last\ element\ as\ pivot,\r\n\ \ \ \ places\ the\ pivot\ element\ at\ its\ correct\r\n\ \ \ \ position\ in\ sorted\ array,\ and\ places\ all\r\n\ \ \ \ smaller\ (smaller\ than\ pivot)\ to\ left\ of\r\n\ \ \ \ pivot\ and\ all\ greater\ elements\ to\ right\r\nof\ pivot
+comment1.params=arr\ low\ high
+comment1.target=void\ sort(int[],\ int,\ int)
+comment1.text=\ The\ main\ function\ that\ implements\ QuickSort()\r\n\ \ \ \ arr[]\ -->\ Array\ to\ be\ sorted,\r\n\ \ \ \ low\ \ -->\ Starting\ index,\r\nhigh\ \ -->\ Ending\ index
+comment2.params=arr
+comment2.target=void\ printArray(int[])
+comment2.text=A\ utility\ function\ to\ print\ array\ of\ size\ n
+comment3.params=arr
+comment3.target=void\ sort(int[])
+comment4.params=
+comment4.target=java.lang.String\ getName()
+numComments=5
